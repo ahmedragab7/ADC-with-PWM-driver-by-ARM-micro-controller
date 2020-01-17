@@ -1,0 +1,225 @@
+#define SYS_CTRL_RCC     (*((volatile unsigned long*)0x400FE060))
+#define SYS_CTRL_RCGC0     (*((volatile unsigned long*)0x400FE100))
+#define SYS_CTRL_RCGC2     (*((volatile unsigned long*)0x400FE108))
+#define SYS_CTRL_RCGCADC    (*((volatile unsigned long*)0x400FE638))
+#define SYS_CTRL_PRGPIO     (*((volatile unsigned long*)0x400FEA08))
+#define SYS_CTRL_RCGCGPIO    (*((volatile unsigned long*)0x400FE608))
+#define SYS_CTRL_GPIOHBCTL    (*((volatile unsigned long*)0x400FE06C))
+
+
+
+//************************************************************************************************
+//-------------------------GPIO PORTB REGISTERS---------------------------------------------------
+//************************************************************************************************
+#define GPIO_PORTB_DATA    (*((volatile unsigned long*)0x400053FC))
+#define GPIO_PORTB_DIR    (*((volatile unsigned long*)0x40005400))
+#define GPIO_PORTB_DEN    (*((volatile unsigned long*)0x4000551C))
+#define GPIO_PORTB_AFSEL   (*((volatile unsigned long*)0x40005420))
+#define GPIO_PORTB_PCTL       (*((volatile unsigned long*)0x4000552C))
+#define GPIO_PORTB_AMSEL   (*((volatile unsigned long*)0x40005528))
+
+#define SYS_CTRL_RCGC2_GPIOB  0x00000002
+
+
+//************************************************************************************************
+//-------------------------GPIO PORTF REGISTERS---------------------------------------------------
+//************************************************************************************************
+#define GPIO_PORTF_DATA    (*((volatile unsigned long*)0x400253FC))
+#define GPIO_PORTF_DIR    (*((volatile unsigned long*)0x40025400))
+#define GPIO_PORTF_DEN    (*((volatile unsigned long*)0x4002551C))
+#define GPIO_PORTF_AFSEL   (*((volatile unsigned long*)0x40025420))
+
+//************************************************************************************************
+//-------------------------GPIO PORTE REGISTERS---------------------------------------------------
+//************************************************************************************************
+#define GPIO_PORTE_DATA    (*((volatile unsigned long*)0x400243FC))
+#define GPIO_PORTE_DIR    (*((volatile unsigned long*)0x40024400))
+#define GPIO_PORTE_DEN    (*((volatile unsigned long*)0x4002451C))
+#define GPIO_PORTE_AFSEL   (*((volatile unsigned long*)0x40024420))
+#define GPIO_PORTE_AMSEL   (*((volatile unsigned long*)0x40024528))
+
+//*************************************************************************************************
+//------------------------PWM REGISTER-------------------------------------------------------------
+//*************************************************************************************************
+#define PWM_CTL_R              (*((volatile unsigned long *)0x40028000))
+#define PWM_SYNC_R              (*((volatile unsigned long *)0x40028004))
+#define PWM_ENABLE_R            (*((volatile unsigned long *)0x40028008))
+#define PWM_INVERT_R            (*((volatile unsigned long *)0x4002800C))
+#define PWM_FAULT_R             (*((volatile unsigned long *)0x40028010))
+#define PWM_INTEN_R             (*((volatile unsigned long *)0x40028014))
+#define PWM_RIS_R              (*((volatile unsigned long *)0x40028018))
+#define PWM_MISC_R              (*((volatile unsigned long *)0x4002801C))
+#define PWM_STATUS_R            (*((volatile unsigned long *)0x40028020))
+#define PWM_FAULTVAL_R          (*((volatile unsigned long *)0x40028024))
+#define PWM_ENUPD_R             (*((volatile unsigned long *)0x40028028))
+#define PWM0_CTL_R              (*((volatile unsigned long *)0x40028040))
+#define PWM0_INTEN_R            (*((volatile unsigned long *)0x40028044))
+#define PWM0_RIS_R              (*((volatile unsigned long *)0x40028048))
+#define PWM0_ISC_R              (*((volatile unsigned long *)0x4002804C))
+#define PWM0_LOAD_R             (*((volatile unsigned long *)0x40028050))
+#define PWM0_COUNT_R            (*((volatile unsigned long *)0x40028054))
+#define PWM0_CMPA_R             (*((volatile unsigned long *)0x40028058))
+#define PWM0_CMPB_R             (*((volatile unsigned long *)0x4002805C))
+#define PWM0_GENA_R             (*((volatile unsigned long *)0x40028060))
+#define PWM0_GENB_R             (*((volatile unsigned long *)0x40028064))
+#define PWM0_DBCTL_R            (*((volatile unsigned long *)0x40028068))
+#define PWM0_DBRISE_R           (*((volatile unsigned long *)0x4002806C))
+#define PWM0_DBFALL_R           (*((volatile unsigned long *)0x40028070))
+#define PWM0_FLTSRC0_R          (*((volatile unsigned long *)0x40028074))
+#define PWM0_FLTSRC1_R          (*((volatile unsigned long *)0x40028078))
+#define PWM0_MINFLTPER_R        (*((volatile unsigned long *)0x4002807C))
+
+
+
+
+
+
+
+
+////////////port E Registers//////////////////////////
+#define GPIODATAE  (*((volatile unsigned long *) 0x400243FC) )
+#define GPIODIRE   (*((volatile unsigned long *) 0x40024400) )
+#define GPIOAFSELE (*((volatile unsigned long *) 0x40024420) )
+#define GPIODENE    (*((volatile unsigned long *) 0x4002451c) )
+#define GPIOLOCKE   (*((volatile unsigned long *) 0x40024520) )
+#define GPIOPURE    (*((volatile unsigned long *) 0x40024510) )
+#define CR_RE       (*((volatile unsigned long *) 0x40024524) )
+#define sysctl     (*((volatile unsigned long *) 0x400FE108) )
+#define pulldownE     (*((volatile unsigned long *) 0x40024514) )
+#define GPIOAMSEL       (*((volatile unsigned long *) 0x40024528) )
+
+
+//////ADC registers/////////////
+#define RCGC0  (*((volatile unsigned long *) 0x400FE100) )
+#define ADCACTSS  (*((volatile unsigned long *) 0x40038000) )
+#define ADCRIS  (*((volatile unsigned long *) 0x40038004) )
+#define ADCEMUX  (*((volatile unsigned long *) 0x40038014) )
+#define ADCSSPRI  (*((volatile unsigned long *) 0x40038020) )
+#define ADCPSSI  (*((volatile unsigned long *) 0x40038028) )
+#define ADCDCISC  (*((volatile unsigned long *) 0x40038034) )
+#define ADCDATA  (*((volatile unsigned long *) 0x400380A8) )
+#define ADCSSMUX3  (*((volatile unsigned long *) 0x400380A0) )
+#define ADCSSCTL3  (*((volatile unsigned long *) 0x400380A4) )
+
+
+
+#define GPIODATAF  (*((volatile unsigned long *) 0x400043FC) )
+#define GPIODIRF   (*((volatile unsigned long *) 0x40004400) )
+#define GPIOAFSELF (*((volatile unsigned long *) 0x40004420) )
+#define GPIODENA    (*((volatile unsigned long *) 0x4000451c) )
+#define GPIOLOCK   (*((volatile unsigned long *) 0x40004520) )
+#define GPIOPUR    (*((volatile unsigned long *) 0x40004510) )
+#define CR_R       (*((volatile unsigned long *) 0x40004524) )
+#define sysctlA     (*((volatile unsigned long *) 0x400FE608) )
+#define pulldown     (*((volatile unsigned long *) 0x40004514) )
+#define PA2     (*((volatile unsigned long *) 0x40004010) )
+#define PA3     (*((volatile unsigned long *) 0x40004020) )
+
+
+////////////////////Functions used in program:
+
+
+void port_f_intial()
+{
+    volatile unsigned long delay;
+    sysctlA|=0x01;
+    delay=sysctlA;
+    GPIODENA=0xff;
+    CR_R=0x1F;
+    GPIODIRF=0x08;
+    GPIOAFSELF=0x00;
+    GPIOLOCK=0x4C4F434B;
+    pulldown=0x04;
+}
+
+void ADC_int()
+{
+    unsigned long delay=0;
+    sysctl |=0x010;
+    delay=sysctl;
+    GPIODENE&=~0x04;
+    GPIODIRE&=~0x04;
+    GPIOAFSELE|=0x04;
+    GPIOAMSEL|=0x04;
+
+    RCGC0|=0x010000;
+    delay=RCGC0;
+    RCGC0&=~0x0300;
+    ADCSSPRI= 0x0123;
+    ADCACTSS&=~0x08;
+    ADCEMUX &=~0x0F000;
+    ADCSSMUX3 &=~0x000F;
+    ADCSSMUX3 +=1;
+    ADCSSCTL3=0x0006;
+    ADCACTSS|=0x08;
+
+}
+
+unsigned long read()
+{unsigned long result=0;
+    ADCPSSI |=0x08;
+    while((ADCRIS & 0x08)==0){};
+    result=ADCDATA & 0x0FFF;
+    ADCDCISC = 0x0008;
+    return result;
+}
+
+
+
+
+
+
+
+
+
+void Pin_PB6_Init(void)
+{
+ SYS_CTRL_RCGC0|=0x00100000;//Enable PWM Clock
+ SYS_CTRL_PRGPIO|=(SYS_CTRL_RCGC2_GPIOB);//Enable Clock to PORTB
+ SYS_CTRL_RCGC2|=(SYS_CTRL_RCGC2_GPIOB);//Enable Clock to PORTB
+ GPIO_PORTB_AFSEL|=(0x00000040);//Enable Alternate Function on PB6
+ GPIO_PORTB_PCTL&=~0x0F000000;//PORT MUX CONTROL 6
+ GPIO_PORTB_PCTL|=0x04000000;//PORT MUX CONTROL 6
+ GPIO_PORTB_AMSEL&=~0x40;//Disable Analogue Functionality
+ SYS_CTRL_RCC|=0x00100000|(SYS_CTRL_RCC &(~0x000E0000));//Use PWMDIV, DIV_2, BYPASS=0,
+ GPIO_PORTB_DIR|=0x0000000F;//Make Output
+ GPIO_PORTB_DEN|=0x000000FF;// Digital Data is Enabled
+
+}
+
+
+void PWM0_Init(void)
+{
+ PWM0_CTL_R=0x00000000;//Disable PWM
+ PWM0_GENA_R|=0x000000C8;//Drive PWMa High,Action for Comparator is drive high
+ PWM0_LOAD_R|= 0x00000fff;//Load 1600000 for 6 Hz frequency so that we can check blinking of LED 0x00186A00.
+ PWM0_CMPA_R|=0x00000f;//25% Duty Cycle
+ PWM0_CTL_R|=0x00000001;//Start Timer for PWM Generator
+ PWM_ENABLE_R|=0x00000001;//Start PWM
+}
+
+
+
+/**
+ * main.c
+ */
+int main(void)
+{
+    Pin_PB6_Init();//PB6 M0PWM0 pin initialization
+
+    PWM0_Init();//Initialization and Configuration of PWM
+    ADC_int();
+    port_f_intial();
+    long i;
+    int d;
+    while(1){
+
+            PWM0_CMPA_R=0x00000f+read();
+
+        }
+        
+      //Wait Here
+
+    return 0;
+}
+        
